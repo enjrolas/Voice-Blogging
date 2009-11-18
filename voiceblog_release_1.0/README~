@@ -1,0 +1,44 @@
+This is a project that lets you blog by making a call from your cell
+phone.  The recorded audio from your call, and a transcription appear
+as a blog post on your wordpress blog.
+
+This php code lives on a server.  It interfaces with Twilio's API to
+let you make a call, record a message, and post the message and an
+automated transcription on your blog.
+
+To set it up for yourself, here's what you need to do:
+
+First of all, you'll need a server that has php installed.  That's
+probably the hardest part of the whole deal.
+
+Make an account at twilio.com
+When I was writing this, it was free to make the account, and they
+give you $30 in call credit, which is a lot of blog posting.
+
+Upload the code to your server and put it in a directory that's
+accessible online.
+
+Edit remotePost.class.php:  Change the $wpURL variable to the URL of
+your wordpress blog, but keep the 'xmlrpc.php' ending.
+change the $uname variable to the name of a user for your blog, and
+the $pass variable to that user's password.
+
+That's it!  There's just one last thing you need to do:
+Log in to twilio.com and, on the account dashboard page, scroll about
+halfway down.  There's a box labeled 'Your Trial Sandbox,' and in that
+box, there's a phone number, a PIN, and a field labeled 'USES URL'
+In that field, put the web address of the directory you placed these
+files in, with 'makerecording.php' tacked on to the end (i.e.
+http://www.myserver.com/mydirectory/makerecording.php)
+
+sweet!  Now just call the phone numbe on your account page (it's
+probably 866.853.6913) and enter the PIN code from your account page.
+The software will prompt you to talk.  Hang up whenever you're done,
+and the blog post will appear in a minute or two on your site.
+Hooray!
+
+Alex Hornstein
+alex@nublabs.com
+
+artiswrong.com
+
